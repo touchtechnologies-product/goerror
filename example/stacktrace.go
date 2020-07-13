@@ -4,7 +4,7 @@ import (
     "fmt"
     "io/ioutil"
 
-    "git.touchdevops.com/lib/goerror"
+    "github.com/touchtechnologies-product/goerror"
 )
 
 func main() {

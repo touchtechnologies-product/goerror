@@ -32,7 +32,7 @@ func RespValidateError(c *gin.Context, err error) {
 	if errs, ok := err.(validator.ValidationErrors); ok {
 		for _, errValidate := range errs {
 			errValidates = append(errValidates, &goerror.Reason{
-				FieldName: errValidate.Namespace(),
+				FieldName: errValidate.Field(),
 				Reason:    errValidate.ActualTag(),
 				Value:     errValidate.Param(),
 			})

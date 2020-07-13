@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"gopkg.in/go-playground/validator.v9"
 
-	"github.com/devit-tel/goerror"
+	"git.touchdevops.com/lib/goerror"
 )
 
 func RespWithError(c *gin.Context, err error) {

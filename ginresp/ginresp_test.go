@@ -15,7 +15,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/go-playground/validator.v9"
 
-	"github.com/devit-tel/goerror"
+	"git.touchdevops.com/lib/goerror"
 )
 
 func setupGin() *gin.Engine {

@@ -1,4 +1,4 @@
-module github.com/devit-tel/goerror
+module github.com/touchtechnologies-product/goerror
 
 go 1.12
 

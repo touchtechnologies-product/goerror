@@ -12,7 +12,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"
 
-	"github.com/devit-tel/goerror"
+	"github.com/touchtechnologies-product/goerror"
 )
 
 func cleanResponse(responseBytes []byte) string {

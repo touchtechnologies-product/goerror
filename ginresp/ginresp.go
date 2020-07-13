@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"gopkg.in/go-playground/validator.v9"
 
-	"github.com/touchtechnologies-product/goerror"
+	"github.com/devit-tel/goerror"
 )
 
 type ErrorValidate struct {

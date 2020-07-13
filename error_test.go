@@ -29,7 +29,7 @@ func TestGoError_WithCause(t *testing.T) {
 	goErr := DefineInternalServerError("TestStackTrace", "Test stacktrace").WithCause(err)
 	require.Error(t, goErr)
 	require.NotEmpty(t, goErr.StackTrace())
-	require.Equal(t, "TestStackTrace: Test stacktrace - open /tmp/dat: no such file or directory - open /tmp/dat: no such file or directory", goErr.ErrorWithCause())
+	require.Equal(t, "TestStackTrace: Test stacktrace - open /tmp/dat: no such file or directory", goErr.ErrorWithCause())
 }
 
 func TestGoError_Input(t *testing.T) {
@@ -51,51 +51,4 @@ func TestGoError_Input(t *testing.T) {
 			Name:   "tester",
 		})
 	require.Equal(t, "{user_1 tester}", inputMap.PrintInput())
-}
-
-func TestGoError_WithKeyValueInput(t *testing.T) {
-	t.Run("Success", func(t *testing.T) {
-		err := DefineInternalServerError("TestInput", "Test input").WithKeyValueInput("job", "knight", "level", 99, "desc", "any")
-
-		inputData, ok := err.Input().(map[string]interface{})
-
-		require.True(t, ok)
-		require.Equal(t, inputData["job"], "knight")
-		require.Equal(t, inputData["level"], 99)
-		require.Equal(t, inputData["desc"], "any")
-	})
-
-	t.Run("Invalid input once", func(t *testing.T) {
-		err := DefineInternalServerError("TestInput", "Test input").WithKeyValueInput("job")
-		require.Equal(t, []interface{}{"job"}, err.Input())
-
-		_, ok := err.Input().(map[string]interface{})
-		require.False(t, ok)
-	})
-
-	t.Run("Invalid input", func(t *testing.T) {
-		err := DefineInternalServerError("TestInput", "Test input").WithKeyValueInput("job", "knight", 99)
-		require.Equal(t, []interface{}{"job", "knight", 99}, err.Input())
-
-		_, ok := err.Input().(map[string]interface{})
-		require.False(t, ok)
-	})
-
-	t.Run("Nil input", func(t *testing.T) {
-		err := DefineInternalServerError("TestInput", "Test input").WithKeyValueInput(nil)
-		require.Equal(t, err.Input(), nil)
-
-		_, ok := err.Input().(map[string]interface{})
-		require.False(t, ok)
-	})
-
-	t.Run("Invalid Key input", func(t *testing.T) {
-		err := DefineInternalServerError("TestInput", "Test input").WithKeyValueInput(434, "knight", nil, 99)
-
-		inputData, ok := err.Input().(map[string]interface{})
-
-		require.True(t, ok)
-		require.Equal(t, inputData["errf_0"], "knight")
-		require.Equal(t, inputData["errf_1"], 99)
-	})
 }

@@ -20,20 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f8dc850-2b65-4831-b17a-f7e10d1ea7ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tmp/dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/define.go" beforeDir="false" afterPath="$PROJECT_DIR$/define.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/error.go" beforeDir="false" afterPath="$PROJECT_DIR$/error.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/error_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/error_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/stacktrace.go" beforeDir="false" afterPath="$PROJECT_DIR$/example/stacktrace.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ginresp/ginresp.go" beforeDir="false" afterPath="$PROJECT_DIR$/ginresp/ginresp.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ginresp/ginresp_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/ginresp/ginresp_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reason.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reason_test.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

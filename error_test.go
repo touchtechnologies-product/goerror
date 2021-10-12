@@ -29,7 +29,7 @@ func TestGoError_WithCause(t *testing.T) {
 	goErr := DefineInternalServerError("TestStackTrace", "Test stacktrace").WithCause(err)
 	require.Error(t, goErr)
 	require.NotEmpty(t, goErr.StackTrace())
-	require.Equal(t, "TestStackTrace: Test stacktrace - open /tmp/dat: no such file or directory", goErr.ErrorWithCause())
+	require.Equal(t, "TestStackTrace: Test stacktrace - open /tmp/dat: no such file or directory - open /tmp/dat: no such file or directory", goErr.ErrorWithCause())
 }
 
 func TestGoError_Input(t *testing.T) {
